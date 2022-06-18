@@ -1,0 +1,149 @@
+/* import custom fonts */
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+/* boilerplate styles */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+img {
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+/* nav bar */
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 20px;
+    font-size: 16px;
+    align-items: center;
+    justify-content: end;
+}
+
+.nav-list li {
+    cursor: pointer;
+}
+
+.nav-gmail a,
+.nav-images a {
+    color: black;
+    text-decoration: none;
+}
+
+.nav-gmail a:hover,
+.nav-images a:hover {
+    text-decoration: underline;
+}
+
+.nav-apps,
+.nav-user {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    padding: 1.35rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 100ms linear;
+    margin-left: -7px;
+}
+
+.nav-apps:hover,
+.nav-user:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.nav-apps {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.nav-apps:hover div {
+    opacity: 1;
+    transition-delay: 1s;
+}
+
+.nav-apps div {
+    position: absolute;
+    background-color: rgb(83, 83, 83);
+    color: white;
+    padding: 4px 8px;
+    white-space: nowrap;
+    border-radius: 4px;
+    font-size: .8rem;
+    bottom: -30px;
+    opacity: 0;
+    transition: opacity 100ms linear;
+    pointer-events: none;
+    transition-delay: 0s;
+}
+
+.nav-apps img{
+    width: 27px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.nav-user img{
+    border-radius: 50%;
+    width: 35px;
+}
+
+/* main */
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+
+.main > img {
+    width: 30%;
+    margin: 10px auto;
+}
+
+/* .logo-title {
+    font-family: "PT Sans";
+    user-select: none;
+    display: flex;
+    font-size: 100px;
+} */
+
+.input {
+    display: flex;
+    border: 1px solid gray;
+    padding: 10px;
+    border-radius: 40px;
+    width: 600px;
+}
+
+.input img {
+    width: 30px;
+}
+
+.input input {
+    border: none;
+    outline: none;
+    font-size: 20px;
+    margin: 0;
+    width: 100%;
+    padding: 0 10px;
+}
